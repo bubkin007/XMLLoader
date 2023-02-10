@@ -1,0 +1,84 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" targetNamespace="urn:cbr-ru:ed:v2.0" xmlns:mstns="urn:cbr-ru:ed:v2.0" xmlns="urn:cbr-ru:ed:v2.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:element name="ED807">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="BICDirectoryEntry" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ParticipantInfo" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="RstrList" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="Rstr" form="unqualified" type="xs:string" />
+                        <xs:attribute name="RstrDate" form="unqualified" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="NameP" form="unqualified" type="xs:string" />
+                  <xs:attribute name="CntrCd" form="unqualified" type="xs:string" />
+                  <xs:attribute name="Rgn" form="unqualified" type="xs:string" />
+                  <xs:attribute name="Ind" form="unqualified" type="xs:string" />
+                  <xs:attribute name="Tnp" form="unqualified" type="xs:string" />
+                  <xs:attribute name="Nnp" form="unqualified" type="xs:string" />
+                  <xs:attribute name="Adr" form="unqualified" type="xs:string" />
+                  <xs:attribute name="DateIn" form="unqualified" type="xs:string" />
+                  <xs:attribute name="PtType" form="unqualified" type="xs:string" />
+                  <xs:attribute name="Srvcs" form="unqualified" type="xs:string" />
+                  <xs:attribute name="XchType" form="unqualified" type="xs:string" />
+                  <xs:attribute name="UID" form="unqualified" type="xs:string" />
+                  <xs:attribute name="ParticipantStatus" form="unqualified" type="xs:string" />
+                  <xs:attribute name="PrntBIC" form="unqualified" type="xs:string" />
+                  <xs:attribute name="RegN" form="unqualified" type="xs:string" />
+                  <xs:attribute name="EnglName" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="SWBICS" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="SWBIC" form="unqualified" type="xs:string" />
+                  <xs:attribute name="DefaultSWBIC" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Accounts" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="AccRstrList" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="AccRstr" form="unqualified" type="xs:string" />
+                        <xs:attribute name="AccRstrDate" form="unqualified" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="Account" form="unqualified" type="xs:string" />
+                  <xs:attribute name="RegulationAccountType" form="unqualified" type="xs:string" />
+                  <xs:attribute name="CK" form="unqualified" type="xs:string" />
+                  <xs:attribute name="AccountCBRBIC" form="unqualified" type="xs:string" />
+                  <xs:attribute name="DateIn" form="unqualified" type="xs:string" />
+                  <xs:attribute name="AccountStatus" form="unqualified" type="xs:string" />
+                  <xs:attribute name="DateOut" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="BIC" form="unqualified" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="EDNo" form="unqualified" type="xs:string" />
+      <xs:attribute name="EDDate" form="unqualified" type="xs:string" />
+      <xs:attribute name="EDAuthor" form="unqualified" type="xs:string" />
+      <xs:attribute name="CreationReason" form="unqualified" type="xs:string" />
+      <xs:attribute name="CreationDateTime" form="unqualified" type="xs:string" />
+      <xs:attribute name="InfoTypeCode" form="unqualified" type="xs:string" />
+      <xs:attribute name="BusinessDay" form="unqualified" type="xs:string" />
+      <xs:attribute name="DirectoryVersion" form="unqualified" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="ED807" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
